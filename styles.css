@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px); /* Menü kısmına yer bırakıyoruz */
+}
+
+.box {
+    width: 80%;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.box:hover {
+    background-color: #45a049;
+}
+
+.menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-button {
+    width: 60px;
+    height: 60px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #45a049;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 80px); /* Menü yüksekliğini hesaba kat */
+    background-color: #4CAF50; /* Yeşil tonunda arka plan */
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.overlay p {
+    margin: 10px;
+}
+
+.menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-button {
+    width: 60px;
+    height: 60px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Link altı çizgiyi kaldır */
+}
+
+.menu-button:hover {
+    background-color: #45a049;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.profile-container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+}
+
+.profile-info {
+    margin-bottom: 20px;
+}
+
+#username-display {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button#logout-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button#logout-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Diğer CSS kodları */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 80px); /* Menü yüksekliğini hesaba kat */
+    background-color: #4CAF50; /* Yeşil tonunda arka plan */
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.overlay p {
+    margin: 10px;
+}
+
+button#top-up-btn {
+    background-color: #2196F3; /* Mavi renk */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button#top-up-btn:hover {
+    background-color: #1976D2;
+}
+/* Diğer CSS kodları */
+
+.menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.menu-button {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+.menu-button:hover {
+    background-color: #555;
+}
+
+.ranking-container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+}
+
+#ranking-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#ranking-list li {
+    margin: 10px 0;
+}
+
+/* CSS */
+.top-right-box {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50; /* Yeşil arka plan */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-right-box a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+}
+
+/* Ayro sayfasında top-right-box'ı gizle */
+body.ayro-page .top-right-box {
+    display: none;
+}
