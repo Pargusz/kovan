@@ -1,32 +1,26 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css"> <!-- styles.css dosyasını dahil ediyoruz -->
 </head>
 <body>
     <div class="profile-container">
-        <h1>Kullanıcı Profiliniz</h1>
-        <div class="profile-info">
-            <p>Kullanıcı Adınız:</p>
-            <p id="username-display">Yükleniyor...</p>
-        </div>
-        <button id="logout-btn">Çıkış Yap</button>
-    </div>
-    
-    <div class="menu">
-        <a href="songs.html" class="menu-button">Şarkılar</a>
-        <a href="payment.html" class="menu-button">Ödeme</a>
-        <a href="profile.html" class="menu-button">Profil</a>
+        <div class="username">Kullanıcı Adınız: <span id="username"></span></div>
+        <div class="followers">Takipçi Sayısı: <span id="followerCount">0</span></div>
+        <button class="logout-btn" id="logout">Çıkış Yap</button>
     </div>
 
-    <!-- Sağ üst köşeye kare kutu ekleyelim -->
-<div class="top-right-box">
-    <a href="ayro.html">Ayro</a>
-</div>
+    <!-- Alttaki Menü -->
+    <div class="bottom-menu">
+        <button class="menu-btn" onclick="window.location.href='songs.html'">Şarkılar</button>
+        <button class="menu-btn" onclick="window.location.href='search.html'">Arama</button> <!-- Yeni buton -->
+        <button class="menu-btn" onclick="window.location.href='payment.html'">Ödeme</button>
+        <button class="menu-btn" onclick="window.location.href='profile.html'">Profil</button>
+    </div>
 
-    <script src="profile.js"></script>
+    <script src="profile.js"></script> <!-- profile.js dosyasını dahil ediyoruz -->
 </body>
 </html>

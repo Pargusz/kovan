@@ -1,21 +1,16 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const usernameDisplay = document.getElementById('username-display');
-    const logoutBtn = document.getElementById('logout-btn');
+// profile.js
 
-    // Kullanıcı adını localStorage'dan al
-    const username = localStorage.getItem('username');
-    
-    if (username) {
-        usernameDisplay.textContent = username;
-    } else {
-        usernameDisplay.textContent = 'Kullanıcı adı bulunamadı';
-    }
+// Kullanıcı adı ve takipçi sayısı verilerini çekiyoruz
+const username = localStorage.getItem('username') || 'Bilinmiyor';
+const followerCount = localStorage.getItem('followerCount') || 0;
 
-    logoutBtn.addEventListener('click', function() {
-        // localStorage'dan kullanıcı adını sil
-        localStorage.removeItem('username');
-        
-        // Ana sayfaya yönlendir
-        window.location.href = 'index.html';
-    });
+// HTML elementlerine verileri yerleştiriyoruz
+document.getElementById('username').textContent = username;
+document.getElementById('followerCount').textContent = followerCount;
+
+// Çıkış yap butonuna tıklama olayı
+document.getElementById('logout').addEventListener('click', () => {
+    // Çıkış yap işlemi için gerekli adımlar (örneğin, localStorage temizlenebilir)
+    localStorage.clear();
+    window.location.href = 'index.html'; // Giriş sayfasına yönlendirme
 });

@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giriş Ekranı</title>
+    <title>Giriş</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="login-container">
-        <h1>Giriş Yap</h1>
-        <form id="login-form">
-            <div class="form-group">
-                <label for="username">Kullanıcı Adı:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <input type="checkbox" id="agree" name="agree" required>
-                <label for="agree">Okudum ve onayladım</label>
-            </div>
-            <button type="submit">Giriş Yap</button>
-        </form>
-    </div>
-    
-    <script src="script.js"></script>
+    <h1>Giriş Yap</h1>
+    <form id="login-form">
+        <label for="username">Kullanıcı Adı:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label>
+            <input type="checkbox" id="agree" required>
+            Okudum ve onayladım
+        </label>
+        <br>
+        <button type="submit">Giriş Yap</button>
+    </form>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            // Kullanıcıyı aktif olarak işaretle
+            let activeUsers = JSON.parse(localStorage.getItem('activeUsers')) || [];
+            if (!activeUsers.includes(username)) {
+                activeUsers.push(username);
+                localStorage.setItem('activeUsers', JSON.stringify(activeUsers));
+            }
+            window.location.href = 'songs.html'; // Otomatik yönlendirme
+        });
+    </script>
 </body>
 </html>
